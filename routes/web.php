@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*
+|--------------------------------------------------------------------------
+| Web Routes — SAPT Single Page Application Entry
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/{any}', function () {
+    return view('app');
+})->where('any', '.*');
